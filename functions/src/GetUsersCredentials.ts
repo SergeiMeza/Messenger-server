@@ -1,5 +1,5 @@
 import * as admin from 'firebase-admin'
-import Const = require('./Constants/Constants')
+import Const = require('./Constants')
 
 const root = Const.root
 

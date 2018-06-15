@@ -1,6 +1,6 @@
 import * as functions from 'firebase-functions'
 import * as admin from 'firebase-admin'
-import GetUsersCredentials = require('./api/get/GetUsersCredentials');
+import GetUsersCredentials = require('./GetUsersCredentials');
 import PostNewUser = require('./PostNewUser')
 
 admin.initializeApp()

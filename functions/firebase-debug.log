@@ -767,3 +767,42 @@ Error: The default Firebase app already exists. This means you called initialize
 [debug] [2018-06-15T09:37:10.847Z] <<< HTTP RESPONSE 200
 [info] ✔  functions: postNewUser: http://localhost:5000/messenger-1994/us-central1/postNewUser
 [info] ✔  functions: getUserCredentials: http://localhost:5000/messenger-1994/us-central1/getUserCredentials
+[debug] [2018-06-15T10:01:08.053Z] ----------------------------------------------------------------------
+[debug] [2018-06-15T10:01:08.057Z] Command:       /usr/local/lib/node_modules/node/bin/node /usr/local/bin/firebase serve --only functions
+[debug] [2018-06-15T10:01:08.058Z] CLI Version:   3.16.0
+[debug] [2018-06-15T10:01:08.058Z] Platform:      darwin
+[debug] [2018-06-15T10:01:08.058Z] Node Version:  v6.11.5
+[debug] [2018-06-15T10:01:08.059Z] Time:          Fri Jun 15 2018 19:01:08 GMT+0900 (JST)
+[debug] [2018-06-15T10:01:08.059Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-15T10:01:08.080Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-15T10:01:08.080Z] > authorizing via signed-in user
+[debug] [2018-06-15T10:01:08.082Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-06-15T10:01:08.083Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/jJVZb3fsOVH-KxiL8MYKr9jWWJdy9XkWm8u-4UDNgGN_mRDuOlgL9xB6zE_KKuIm',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Fri Jun 15 2018 19:01:08 GMT+0900 (JST)
+[debug] [2018-06-15T10:01:08.379Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-15T10:01:08.400Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/messenger-1994  
+  
+ Fri Jun 15 2018 19:01:08 GMT+0900 (JST)
+[debug] [2018-06-15T10:01:09.445Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-15T10:01:09.446Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/messenger-1994/tokens  
+  
+ Fri Jun 15 2018 19:01:09 GMT+0900 (JST)
+[debug] [2018-06-15T10:01:10.242Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/meza/Desktop/Root/01-Dev/Messenger-server'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-06-15T10:01:12.195Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/messenger-1994  
+  
+ Fri Jun 15 2018 19:01:12 GMT+0900 (JST)
+[debug] [2018-06-15T10:01:12.203Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/messenger-1994/apiKeys  
+  
+ Fri Jun 15 2018 19:01:12 GMT+0900 (JST)
+[debug] [2018-06-15T10:01:13.662Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-15T10:01:13.664Z] <<< HTTP RESPONSE 200
