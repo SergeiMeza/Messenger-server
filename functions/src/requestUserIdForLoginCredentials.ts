@@ -25,7 +25,8 @@ exports.onRequest = (request, response) => {
 
 	let path = `${database_root}/USER/credentials/${log_in_id}`
 
-	let fetchUserCounter = admin.database().ref(path).once('value').then(snapshot => {
+
+	let fetchUserCredentials = admin.database().ref(path).once('value').then(snapshot => {
 		if (snapshot.exists()) {
 			let user_id = snapshot.val().user_id
 			if (user_id) {
@@ -38,10 +39,11 @@ exports.onRequest = (request, response) => {
 		}
 	})
 
-	return fetchUserCounter.then((response) => {
+	return fetchUserCredentials.then((response) => {
 		if (response) {
 			return response
 		} 
+
 
 		return admin.database()
 		.ref(`${database_root}/CREDENTIALS/user_counter`)
@@ -72,6 +74,8 @@ exports.onRequest = (request, response) => {
 		})	
 	})
 }
+
+let 
 
 let httpErrorResponse = (response, error_message) => {
 	return response.status(400).send(error_message)
