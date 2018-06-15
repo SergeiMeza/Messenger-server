@@ -806,3 +806,104 @@ Error: The default Firebase app already exists. This means you called initialize
  Fri Jun 15 2018 19:01:12 GMT+0900 (JST)
 [debug] [2018-06-15T10:01:13.662Z] <<< HTTP RESPONSE 200
 [debug] [2018-06-15T10:01:13.664Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: getUserCredentials: http://localhost:5000/messenger-1994/us-central1/getUserCredentials
+[info] ✔  functions: postNewUser: http://localhost:5000/messenger-1994/us-central1/postNewUser
+[debug] [2018-06-15T10:17:21.406Z] ----------------------------------------------------------------------
+[debug] [2018-06-15T10:17:21.409Z] Command:       /usr/local/lib/node_modules/node/bin/node /usr/local/bin/firebase serve --only functions
+[debug] [2018-06-15T10:17:21.410Z] CLI Version:   3.16.0
+[debug] [2018-06-15T10:17:21.410Z] Platform:      darwin
+[debug] [2018-06-15T10:17:21.410Z] Node Version:  v6.11.5
+[debug] [2018-06-15T10:17:21.410Z] Time:          Fri Jun 15 2018 19:17:21 GMT+0900 (JST)
+[debug] [2018-06-15T10:17:21.410Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-15T10:17:21.431Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-15T10:17:21.432Z] > authorizing via signed-in user
+[debug] [2018-06-15T10:17:21.435Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/messenger-1994  
+  
+ Fri Jun 15 2018 19:17:21 GMT+0900 (JST)
+[debug] [2018-06-15T10:17:22.418Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-15T10:17:22.419Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/messenger-1994/tokens  
+  
+ Fri Jun 15 2018 19:17:22 GMT+0900 (JST)
+[debug] [2018-06-15T10:17:23.125Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/meza/Desktop/Root/01-Dev/Messenger-server'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-06-15T10:17:24.594Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/messenger-1994  
+  
+ Fri Jun 15 2018 19:17:24 GMT+0900 (JST)
+[debug] [2018-06-15T10:17:24.594Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/messenger-1994/apiKeys  
+  
+ Fri Jun 15 2018 19:17:24 GMT+0900 (JST)
+[debug] [2018-06-15T10:17:25.670Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-15T10:17:25.733Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: postNewUserCredentials: http://localhost:5000/messenger-1994/us-central1/postNewUserCredentials
+[info] ✔  functions: getUsersCredentials: http://localhost:5000/messenger-1994/us-central1/getUsersCredentials
+[info] ✔  functions: postNewUserPost: http://localhost:5000/messenger-1994/us-central1/postNewUserPost
+[debug] [2018-06-15T10:23:42.887Z] ----------------------------------------------------------------------
+[debug] [2018-06-15T10:23:42.891Z] Command:       /usr/local/lib/node_modules/node/bin/node /usr/local/bin/firebase serve --only functions
+[debug] [2018-06-15T10:23:42.891Z] CLI Version:   3.16.0
+[debug] [2018-06-15T10:23:42.891Z] Platform:      darwin
+[debug] [2018-06-15T10:23:42.891Z] Node Version:  v6.11.5
+[debug] [2018-06-15T10:23:42.892Z] Time:          Fri Jun 15 2018 19:23:42 GMT+0900 (JST)
+[debug] [2018-06-15T10:23:42.892Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-15T10:23:42.918Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-15T10:23:42.919Z] > authorizing via signed-in user
+[debug] [2018-06-15T10:23:42.923Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/messenger-1994  
+  
+ Fri Jun 15 2018 19:23:42 GMT+0900 (JST)
+[debug] [2018-06-15T10:23:43.939Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-15T10:23:43.940Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/messenger-1994/tokens  
+  
+ Fri Jun 15 2018 19:23:43 GMT+0900 (JST)
+[debug] [2018-06-15T10:23:44.625Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/meza/Desktop/Root/01-Dev/Messenger-server'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-06-15T10:23:46.175Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/messenger-1994  
+  
+ Fri Jun 15 2018 19:23:46 GMT+0900 (JST)
+[debug] [2018-06-15T10:23:46.176Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/messenger-1994/apiKeys  
+  
+ Fri Jun 15 2018 19:23:46 GMT+0900 (JST)
+[debug] [2018-06-15T10:23:47.410Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-15T10:23:47.412Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: postNewUserCredentials: http://localhost:5000/messenger-1994/us-central1/postNewUserCredentials
+[info] ✔  functions: getUsersCredentials: http://localhost:5000/messenger-1994/us-central1/getUsersCredentials
+[info] ✔  functions: postNewUserPost: http://localhost:5000/messenger-1994/us-central1/postNewUserPost
+[debug] [2018-06-15T10:28:20.441Z] ----------------------------------------------------------------------
+[debug] [2018-06-15T10:28:20.443Z] Command:       /usr/local/lib/node_modules/node/bin/node /usr/local/bin/firebase serve --only functions
+[debug] [2018-06-15T10:28:20.444Z] CLI Version:   3.16.0
+[debug] [2018-06-15T10:28:20.444Z] Platform:      darwin
+[debug] [2018-06-15T10:28:20.444Z] Node Version:  v6.11.5
+[debug] [2018-06-15T10:28:20.445Z] Time:          Fri Jun 15 2018 19:28:20 GMT+0900 (JST)
+[debug] [2018-06-15T10:28:20.445Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-06-15T10:28:20.465Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-15T10:28:20.465Z] > authorizing via signed-in user
+[debug] [2018-06-15T10:28:20.469Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/messenger-1994  
+  
+ Fri Jun 15 2018 19:28:20 GMT+0900 (JST)
+[debug] [2018-06-15T10:28:21.304Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-15T10:28:21.305Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/messenger-1994/tokens  
+  
+ Fri Jun 15 2018 19:28:21 GMT+0900 (JST)
+[debug] [2018-06-15T10:28:25.655Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/meza/Desktop/Root/01-Dev/Messenger-server'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-06-15T10:28:27.174Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/messenger-1994  
+  
+ Fri Jun 15 2018 19:28:27 GMT+0900 (JST)
+[debug] [2018-06-15T10:28:27.174Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/messenger-1994/apiKeys  
+  
+ Fri Jun 15 2018 19:28:27 GMT+0900 (JST)
+[debug] [2018-06-15T10:28:28.330Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-15T10:28:28.439Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: postNewUserPost: http://localhost:5000/messenger-1994/us-central1/postNewUserPost
+[info] ✔  functions: postNewUserCredentials: http://localhost:5000/messenger-1994/us-central1/postNewUserCredentials
+[info] ✔  functions: getUsersCredentials: http://localhost:5000/messenger-1994/us-central1/getUsersCredentials
