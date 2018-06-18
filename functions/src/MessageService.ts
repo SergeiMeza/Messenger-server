@@ -8,12 +8,12 @@ export const postNewMessage = (req, res) => {
     if (!sender_id || !receiver_ids || !content || !type) {
         return res.status(400).send({error: "invalid message format"})
     }
-    let timestamp = new Date().toISOString()
+    const timestamp = new Date().toISOString()
     const conversation_id = [sender_id, receiver_ids].sort().reduce((total, nextValue) => {
         return total ?  total + "-" + nextValue : nextValue
     }, "")
     const conversation_path = root + `/conversations/${conversation_id}`
-    let message_ref = admin.database().ref(conversation_path).push()
+    const message_ref = admin.database().ref(conversation_path).push()
     const object_id = message_ref.key
     const message = {conversation_id, object_id, sender_id, receiver_ids, content, type, timestamp}
     return message_ref.update(message)
