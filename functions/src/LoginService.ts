@@ -14,7 +14,7 @@ export const verifyInstagramToken = (req, res) => {
 
 
 // Verify LINE token and exchange for Firebase Custom Auth token
-export const verifyLineToken = (req, res) => {
+export const lineLoginWithToken = (req: functions.Request, res: functions.Response) => {
     if (!req.body.token) {
       return res.status(400).send({error: "Access Token not found"})
     }
@@ -22,7 +22,7 @@ export const verifyLineToken = (req, res) => {
     const { token } = req.body
   
     // Verify LINE access token with LINE server then generate Firebase Custom Auth token
-    verifyToken(token)
+    return verifyToken(token)
     .then(customAuthToken => {
         return res.status(200).send({ firebase_token: customAuthToken })
     })

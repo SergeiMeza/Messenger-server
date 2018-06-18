@@ -3,12 +3,10 @@ import path = require('path')
 import os = require('os')
 import fs = require('fs')
 import mkdirp = require('mkdirp-promise')
-import Const = require('./Constants')
+import { root } from './Constants';
 const spawn = require('child-process-promise').spawn;
 const vision = require('@google-cloud/vision')()
 const gcs = require('@google-cloud/storage')()
-
-const root = Const.root
 
 /**
  * When an image is uploaded we check if it is flagged as Adult or Violence by the Cloud Vision

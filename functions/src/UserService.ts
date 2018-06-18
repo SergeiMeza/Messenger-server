@@ -1,9 +1,8 @@
+import * as functions from 'firebase-functions'
 import * as admin from 'firebase-admin'
-import Const = require('./Constants')
+import { root } from './Constants';
 
-const root = Const.root
-
-export const getAllUserCredentials = (req, res) => {
+export const getAllUserCredentials = (req: functions.Request, res: functions.Response) => {
     const path = root + "credentials"
     admin.database().ref(path).once('value')
     .then((snap) => {
@@ -19,7 +18,7 @@ export const getAllUserCredentials = (req, res) => {
 }
 
 
-export const postNewUserCredentials = (req, res) => {
+export const postNewUserCredentials = (req: functions.Request, res: functions.Response) => {
     const { uuid, login_method } = req.body
     if (!uuid) {
         return res.status(400).send({ error: "postNewUser: invalid uuid" })

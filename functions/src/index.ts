@@ -12,7 +12,7 @@ import { root } from './Constants';
 admin.initializeApp()
 
 // MARK: - LoginService
-export const verifyLineToken = functions.https.onRequest(LoginService.verifyLineToken)
+export const verifyLineToken = functions.https.onRequest(LoginService.lineLoginWithToken)
 
 // MARK: - StripeService
 export const createStripeCustomer = functions.auth.user().onCreate(StripeService.createStripeCustomer)

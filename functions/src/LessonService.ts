@@ -1,7 +1,5 @@
 // import * as admin from 'firebase-admin'
-// import Const = require('./Constants')
-
-// const root = Const.root
+// import { root } from './Constants';
 
 export const postNewLesson = (req, res) => {
     res.status(200).send(req.body)

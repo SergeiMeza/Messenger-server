@@ -1,9 +1,8 @@
+import * as functions from 'firebase-functions'
 import * as admin from 'firebase-admin'
-import Const = require('./Constants')
+import { root } from './Constants';
 
-const root = Const.root
-
-export const postNewMessage = (req, res) => {
+export const postNewMessage = (req: functions.Request, res: functions.Response) => {
     const {sender_id, receiver_ids, content, type} = req.body
     if (!sender_id || !receiver_ids || !content || !type) {
         return res.status(400).send({error: "invalid message format"})
@@ -29,22 +28,20 @@ export const postNewMessage = (req, res) => {
     })
 }
 
-export const getMessagesForConversation = (req, res) => {
-    res.send(req.params)
-
-    // const {conversation_id} = req.params
-    // if (!conversation_id) {
-    //     return res.status(400).send({error: "invalid get request format"})
-    // }
-    // const conversation_path = root + `/conversations/${conversation_id}`
-    // return admin.database().ref(conversation_path).once('value')
-    // .then(snap => {
-    //     if (snap.exists()) {
-    //         return res.status(200).send(snap.toJSON())
-    //     }
-    //     return res.status(400).send({error: "conversation is empty"})
-    // })
-    // .catch(error => {
-    //     return res.status(500).send({error})
-    // })
+export const postMessagesForConversation = (req: functions.Request, res:functions.Response) => {
+    const {conversation_id} = req.body
+    if (!conversation_id) {
+        return res.status(400).send({error: "invalid get request format"})
+    }
+    const conversation_path = root + `/conversations/${conversation_id}`
+    return admin.database().ref(conversation_path).once('value')
+    .then(snap => {
+        if (snap.exists()) {
+            return res.status(200).send(snap.toJSON())
+        }
+        return res.status(400).send({error: "conversation is empty"})
+    })
+    .catch(error => {
+        return res.status(500).send({error})
+    })
 }

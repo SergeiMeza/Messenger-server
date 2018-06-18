@@ -1,9 +1,8 @@
+import * as functions from 'firebase-functions'
 import * as admin from 'firebase-admin'
-import Const = require('./Constants')
+import { root } from './Constants';
 
-const root = Const.root
-
-export const getAllPosts = (req, res) => {
+export const getAllPosts = (req: functions.Request, res: functions.Response) => {
     const path = root + "/posts"
     admin.database().ref(path).once('value')
     .then((snap) => {
@@ -18,7 +17,7 @@ export const getAllPosts = (req, res) => {
     })  
 }
 
-export const postNewUserPost = (req, res) => {
+export const postNewUserPost = (req: functions.Request, res: functions.Response) => {
     const {user_id, contents, type} = req.body
     if (!user_id || !contents || !type) {
         return res.status(400).send({error: "invalid post contents"})

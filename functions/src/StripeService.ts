@@ -7,7 +7,7 @@ const stripe = new Stripe(functions.config().stripe.token)
 const currency = functions.config().stripe.currency || 'JPY';
 
 // root/stripe/{user}/stripe_id
-export const createStripeCustomer = (user: admin.auth.UserRecord, context: functions.EventContext) => {
+export const createStripeCustomer = (user: admin.auth.UserRecord) => {
     let options = {    
         account_balance: 0,
         tax_percent: 10
@@ -76,7 +76,7 @@ export const addPaymentSource = (change: functions.Change<functions.database.Dat
     })
 }
 
-export const cleanupUser = (user) => {
+export const cleanupUser = (user: admin.auth.UserRecord) => {
     return admin.database().ref(root + `/stripe/${user.uid}`).once('value')
     .then((snap) => {
         return snap.val()
