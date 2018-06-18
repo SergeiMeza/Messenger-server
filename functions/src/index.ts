@@ -29,7 +29,7 @@ export const getAllPosts = functions.https.onRequest(PostService.getAllPosts)
 export const postNewUserPost = functions.https.onRequest(PostService.postNewUserPost)
 
 // MARK: - MessageService
-export const getMessagesForConversation = functions.https.onRequest(MessageService.postMessagesForConversation)
+export const postMessagesForConversation = functions.https.onRequest(MessageService.postMessagesForConversation)
 export const postNewMessage = functions.https.onRequest(MessageService.postNewMessage)
 
 // MARK: - LessonService
