@@ -9,7 +9,7 @@ export const postNewMessage = (req: functions.Request, res: functions.Response) 
     }
     const timestamp = new Date().toISOString()
     const conversation_id = [sender_id, receiver_ids].sort().reduce((total, nextValue) => {
-        return total ?  total + "-" + nextValue : nextValue
+        return total ? total + "-" + nextValue : nextValue
     }, "")
     const conversation_path = root + `/conversations/${conversation_id}`
     const message_ref = admin.database().ref(conversation_path).push()
