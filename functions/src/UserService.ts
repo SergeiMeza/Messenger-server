@@ -3,8 +3,23 @@ import Const = require('./Constants')
 
 const root = Const.root
 
+export const getAllUserCredentials = (req, res) => {
+    const path = root + "credentials"
+    admin.database().ref(path).once('value')
+    .then((snap) => {
+        if (!snap.exists()) {
+            throw { description: "getUserCredentials: invalid path"}
+        }
+        res.status(200).send(snap.toJSON())
+    })
+    .catch((error) => {
+        console.log(error)
+        res.status(400).send(error)
+    })
+}
 
-export const onRequest = (req, res) => {
+
+export const postNewUserCredentials = (req, res) => {
     const { uuid, login_method } = req.body
     if (!uuid) {
         return res.status(400).send({ error: "postNewUser: invalid uuid" })
